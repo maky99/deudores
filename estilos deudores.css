@@ -1,0 +1,102 @@
+body {
+  margin: 0px;
+}
+/*.contenedor{
+  max-width: 3400px;
+  margin: auto;
+
+}*/
+
+
+header {
+  display: flex;
+  height: 75%;
+  background-color: rgb(250, 119, 241);
+  justify-content: center;  /*donde quiero poner el contenido*/
+  align-items: center;
+  /*centrar logo y texto*/
+  padding: 10px;
+}
+
+.enca2 {
+  /*segundo encabezado*/
+  display: flex;
+  height: 50%;
+  background-color: rgb(157, 200, 228);
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px;
+  
+}
+
+a {
+  text-decoration: none;
+  /*le saco el subrayado*/
+  color: black;
+  /* le doy el color negro */
+}
+
+nav a {
+  font-weight: 800;
+  /*darle negrita*/
+  padding-right: 15px;
+  /*separo los elaces */
+}
+
+nav a:hover {
+  color: white;
+  /*cuando pasa el raton por encima*/
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 80%;  /*tamaño de la imagen del logo */
+  margin-right: 30px;  /*margen con el texto*/
+}
+
+.pepe{
+  display: flex;
+  background-color: rgb(24, 114, 203);
+}
+.pepe > div{
+  background-color: rgb(26, 213, 82);
+  padding: 0px;
+  margin: 10px;/* si lo pongo me queda feo*/
+  padding: 20px;
+  font-size: 20px;
+}
+.tex {
+  display: flex;
+  padding-left: 20px;
+  margin: 10px;
+  margin-left: 5px;
+  float: left;
+  /*width: 95%;*/
+  border: 5px solid black;
+  /*font-size:larger;/*le doy tamaño al parrafo*/
+
+}
+.ima {
+  margin: 5px;
+  border: 5px solid red;
+  width: 400px;
+  height: 450px;
+  
+}
+#popo{
+
+  background-color: antiquewhite;
+}
+footer{
+  display: flex;/*todo en la misma linea*/
+  height: 30%;/*alto */
+  background-color: aqua;
+  align-items: center;/*alineo al centro*/
+  justify-content: space-evenly;/*le doy espacio ente los parrafos*/ 
+
+}
+

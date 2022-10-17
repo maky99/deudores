@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<link rel="stylesheet" href="juridico.css">
+
+<body>
+    <header>
+        <a href="#" class="logo">
+            <img src="imagenes\esc2.png"
+                alt="Escudo de san Luis">
+            <h1>Ministerio de Gobierno Justicia y Culto</h1>
+        </a>
+    </header>
+    
+    <div class="segundo">
+        <p>DIRECCIÒN PROVINCIAL DE REGISTRO DE DEUDORES ALIMENTARIOS MOROSOS</p>
+        <p class="malvi">“ Las Malvinas son argentina ”</p>
+    </div>
+    <hr>
+    <h3>CERTIFICADO NEGATIVO</h3>
+        <p>LEY N° IV-0094-2004 (5522 “R”) – Sanción el 07/04/2001 – Pub. B.O. el 28/04/2004</p>
+
+    <form action="#">
+        <h1>PERSONA FISICA</h1>
+        <h2>Datos de la persona sobre la que se informa:</h2>
+        <p><label for="apellido">Apellido : <input type="apellido" id="apellido"></label></p>
+        <p><label for="nombre">Nombre : <input type="nombre" id="nombre"></label></p>
+        <p><label>Documento tipo :
+                <select id="tipodni">
+                    <option value="dni">DNI</option>
+                    <option value="dnie">DNIE</option>
+                </select>
+            </label></p>
+            <p><label for="numero">Número : <input type="numero" id="numero"></label></p>
+            <p><label for="cuil">CUIL : <input type="cuil" id="cuil"></label></p>
+            <p><label for="domicilio">Domicilio : <input type="domicilio" id="domicilio"></label></p>
+            <p><label for="localidad">Localidad : <input type="localidad" id="localidad"></label></p>
+            <p><label for="provincia">Provincia : <input type="provincia" id="provicia"></label></p>
+            <p><label for="nacionalidad">Nacionalidad : <input type="nacionalidad" id="nacionalidad"></label></p>
+            <p><label for="fechanacimiento">Fecha de Nacimiento : <input type="fechanacimiento" id="fechanacimiento"></label></p>
+            <p><label>Genero :
+                <select id="genero">
+                    <option value="m">M</option>
+                    <option value="f">F</option>
+                    <option value="x">X</option>
+                </select>
+            </label></p>
+            <p><label for="profesion">Profesión : <input type="profesion" id="profesion"></label></p>
+
+            <button type="submit"> Enviar</button>
+    </form>
+    <footer>
+        <p><small>aca_va_el_correo@hotmail.com</small></p>
+        <p><small>Telefono - 4452000 interno 1234</small></p>
+    </footer>
+
+</body>
+
+</html>
