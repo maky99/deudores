@@ -69,15 +69,26 @@ nav a:hover {
   padding: 20px;
   font-size: 20px;
 }
+.poli{
+  margin: 1px;
+  text-decoration: underline;
+  text-align: center;
+  font-size: 50px;
+  font-family: serif;
+  
+}
 .tex {
+  line-height: 2.0;
   display: flex;
-  padding-left: 20px;
   margin: 10px;
-  margin-left: 5px;
-  float: left;
+  /*margin-left: 5px;*/
   /*width: 95%;*/
-  border: 5px solid black;
+  /*border: 5px solid black;
   /*font-size:larger;/*le doy tamaño al parrafo*/
+}
+.listpol{
+  
+  text-align: justify;
 
 }
 .ima {
@@ -92,6 +103,7 @@ nav a:hover {
   background-color: antiquewhite;
 }
 footer{
+  
   display: flex;/*todo en la misma linea*/
   height: 30%;/*alto */
   background-color: aqua;
@@ -99,4 +111,8 @@ footer{
   justify-content: space-evenly;/*le doy espacio ente los parrafos*/ 
 
 }
+footer p{
+  font-weight: bolder;/*le digo que quede negra la letra*/
+}
+
 
