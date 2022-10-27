@@ -22,56 +22,66 @@
         <p class="malvi">“ Las Malvinas son argentina ”</p>
     </div>
     <hr>
-   
+
     <div class="requisi">
-        <ul>
+        <ul class="listrequi">
             <h3>Requisitos</h3>
             <li> Completar el Formulario </li>
             <li>Fotocopia de DNI</li>
             <li>Sellado de $750</li>
         </ul>
     </div>
-    <form action="#">
-        <h1>SOLICITUD DE CERTIFICADO DE PERSONA FISICA</h1>
+    <h1 class="titulo"><ins>SOLICITUD DE CERTIFICADO DE PERSONA FISICA</ins></h1>
 
+    <div class="selecamb">
+        <h3 class="selec">Solicitado por: </h3>
+        <select id="tramite" onclick="pepe(this)">
+            <option value=""></option>
+            <option value="empresa">Empresa</option>
+            <option value="organismoPublico">Organismo Público</option>
+            <option value="tercero">Tercero</option>
+            <option value="particular">Particular</option>
+        </select>
+    </div>
 
-        <div class="soli">
-            <input type="radio" name="fav_language" value="empresa">
-            <label>Solicitado por Empresa</label>
-            <input type="radio" name="fav_language" value="organismoPublico">
-            <label>Organismo Público</label>
-            <input type="radio" name="fav_language" value="tercero">
-            <label>Tercero</label>
-            <input type="radio" name="fav_language" value="parti"charset><!--dejo selecionado este-->
-            <label>Partiular</label>
-
-        </div>
-        <!--aca cuadno no sea el particular que aparezca esto -->
+    <!--aca cuadno no sea el particular que aparezca esto, ver lo que dijo el profe  -->
+    <div class="formu1">
         <div class="nopersonal">
-            <h2> Datos del solicitante :</2>
-                <p><label for="apellido">Apellido : <input type="apellido" id="apellido"></label></p>
-                <p><label for="nombre">Nombres : <input type="nombre" id="nombre"></label></p>
-                <p><label for="domicilio">Domicilio : <input type="domicilio" id="domicilio"></label></p>
-                <p><label for="localidad">Localidad : <input type="localidad" id="localidad"></label></p>
-                <p><label for="provincia">Provincia : <input type="provincia" id="provicia"></label></p>
-                <p><label>Documento tipo :
-                        <select id="tipodni">
-                            <option value="dni">DNI</option>
-                            <option value="dnie">DNIE</option>
-                        </select>
-                    </label></p>
-                <p><label for="numero">Número : <input type="numero" id="numero"></label></p>
-                <p><label for="cuil">CUIL : <input type="cuil" id="cuil"></label></p>
-                <p><label>Genero :
-                        <select id="genero">
-                            <option value="m">M</option>
-                            <option value="f">F</option>
-                            <option value="x">X</option>
-                        </select>
-                    </label></p>
-                <p><label for="profesion">Profesión : <input type="profesion" id="profesion"></label></p>
+            <form action="#">
+                <h2> Datos del solicitante :</2>
+                    <p><label for="apellido">Apellido : <input type="apellido" id="apellido"></label></p>
+                    <p><label for="nombre">Nombres : <input type="nombre" id="nombre"></label></p>
+                    <p><label for="domicilio">Domicilio : <input type="domicilio" id="domicilio"></label></p>
+                    <p><label for="localidad">Localidad : <input type="localidad" id="localidad"></label></p>
+                    <p><label for="provincia">Provincia : <input type="provincia" id="provicia"></label></p>
+                    <p><label>Documento tipo :
+                            <select id="tipodni">
+                                <option value="dni">DNI</option>
+                                <option value="dnie">DNIE</option>
+                            </select>
+                        </label></p>
+                    <p><label for="numero">Número : <input type="numero" id="numero"></label></p>
+                    <p><label for="cuil">CUIL : <input type="cuil" id="cuil"></label></p>
+                    <p><label>Genero :
+                            <select id="genero">
+                                <option value="m">M</option>
+                                <option value="f">F</option>
+                                <option value="x">X</option>
+                            </select>
+                        </label></p>
+                    <p><label for="profesion">Profesión : <input type="profesion" id="profesion"></label></p>
         </div>
+        <script>
+            function pepe(o) {
+                var muestra = document.querySelector(".nopersonal");
+                if (o.value == "tercero") el.style.display = "block";
+                if (o.value == "empresa") el.style.display = "none";
 
+            }
+        </script>
+    </div>
+    </form>
+    <form action="da">
         <h2><ins> Datos de la persona sobre la quien se solicita la información: </ins></2>
 
 
@@ -100,35 +110,36 @@
                 </label></p>
             <p><label for="profesion">Profesión : <input type="profesion" id="profesion"></label></p>
 
-<h2><ins>Indicar el Organismo donde se presentará el certificado emitido:</ins></h2>
+            <h2><ins>Indicar el Organismo donde se presentará el certificado emitido:</ins></h2>
 
-<div class="solsdadai">
-    <input type="radio" name="fav_language" value="muni/comuna">
-    <label>Municipalidad/Comuna</label>
-    <input type="radio" name="fav_language" value="poderejecutivo">
-    <label>Poder Ejecutivo de la Provincia de San Luis</label>
-    <input type="radio" name="fav_language" value="direPersJuri">
-    <label>Direción de Personas Jurídicas </label>
-    <input type="radio" name="fav_language" value="poderLegislativo">
-    <label>Poder Legislativo de la Provincia de San Luis</label>
-    <input type="radio" name="fav_language" value="compraContra">
-    <label>Programa Compras y Contrataciones</label>
-    <input type="radio" name="fav_language" value="poderJudicial">
-    <label>Poder Judiccial de la Provincia de San Luis</label>
-    <input type="radio" name="fav_language" value="vivienda">
-    <label>Munisterio de Vivienda</label>
-    <input type="radio" name="fav_language" value="majistratura">
-    <label>Consejo de la Magistratura</label>
-    <input type="radio" name="fav_language" value="tribuElectora">
-    <label>Tribunal Electoral de la Provincia de San Luis</label>
-    <input type="radio" name="fav_language" value="orgPublicos">
-    <label>Otros Organismos Públicos</label>
-    <input type="radio" name="fav_language" value="particular" checked><!--dejo selecionado este-->
-    <label>Particular</label>
-    <input type="radio" name="fav_language" value="empresaPrivada">
-    <label>Organismos y Empresas Privadas</label>
+            <div class="solsdadai">
+                <input type="radio" name="opccion" value="muni/comuna">
+                <label>Municipalidad/Comuna</label>
+                <input type="radio" name="opccion" value="poderejecutivo">
+                <label>Poder Ejecutivo de la Provincia de San Luis</label>
+                <input type="radio" name="opccion" value="direPersJuri">
+                <label>Direción de Personas Jurídicas </label>
+                <input type="radio" name="opccion" value="poderLegislativo">
+                <label>Poder Legislativo de la Provincia de San Luis</label>
+                <input type="radio" name="opccion" value="compraContra">
+                <label>Programa Compras y Contrataciones</label>
+                <input type="radio" name="opccion" value="poderJudicial">
+                <label>Poder Judiccial de la Provincia de San Luis</label>
+                <input type="radio" name="opccion" value="vivienda">
+                <label>Munisterio de Vivienda</label>
+                <input type="radio" name="opccion" value="majistratura">
+                <label>Consejo de la Magistratura</label>
+                <input type="radio" name="opccion" value="tribuElectora">
+                <label>Tribunal Electoral de la Provincia de San Luis</label>
+                <input type="radio" name="opccion" value="orgPublicos">
+                <label>Otros Organismos Públicos</label>
+                <input type="radio" name="opccion" value="particular" checked>
+                <!--dejo selecionado este-->
+                <label>Particular</label>
+                <input type="radio" name="opccion" value="empresaPrivada">
+                <label>Organismos y Empresas Privadas</label>
 
-</div>
+            </div>
 
 
 

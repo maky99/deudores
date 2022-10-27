@@ -32,3 +32,50 @@ header {
   margin: 3px;
   padding: 5px;
 }
+
+/*requisitos*/
+.requisi {
+  text-align: left;
+}
+
+.listrequi {
+  margin: 0px;
+  font-size: 20px;
+  text-align: left;
+  display: inline-block;
+}
+
+.listrequi h3 {
+  color: red;
+  margin: 10px;
+  font-size: 40px;
+}
+
+/*ak enpieza el titulo*/
+.titulo {
+  text-align: center;
+  font-size: 40px;
+  margin-top: 10px;
+  ;
+  background-color: aqua;
+}
+/*pongo el solicitado junto con el selector */
+.selecamb {
+  display: flex;
+  padding: 15px;
+  margin: 0px;
+}
+.selec {
+  margin: 0px;
+  padding-right: 15px;
+  background-color: rgb(31, 171, 47);
+}
+
+.formu1{
+display: ;
+padding-left: 20px;
+}
+formu1 h2{
+text-align: center;
+
+}
