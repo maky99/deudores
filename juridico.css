@@ -35,15 +35,13 @@ header {
 
 /*requisitos*/
 .requisi {
-  justify-content: space-between;
-  /*text-align: left;*/
-  display:inline-flex;
+  justify-content:space-around;
+  display:flex;
   background-color: aqua;
 }
-nav{
-  
-  justify-content: space-between;
-  
+nav{  
+  display:flex; 
+  justify-content: center;
   background-color: rgb(161, 160, 217);
 }
 
