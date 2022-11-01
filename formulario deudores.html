@@ -30,12 +30,16 @@
             <li>Fotocopia de DNI</li>
             <li>Sellado de $750</li>
         </ul>
+
     </div>
+    <nav>
+        <a href="index.html">REGRESAR</a>
+    </nav>
     <h1 class="titulo"><ins>SOLICITUD DE CERTIFICADO DE PERSONA FISICA</ins></h1>
 
     <div class="selecamb">
         <h3 class="selec">Solicitado por: </h3>
-        <select id="tramite" onclick="pepe(this)">
+        <select id="tramite" onchange="desaparece()">
             <option value=""></option>
             <option value="empresa">Empresa</option>
             <option value="organismoPublico">Organismo Público</option>
@@ -43,25 +47,34 @@
             <option value="particular">Particular</option>
         </select>
     </div>
+    <script>
+        function desaparece{
+            if (Option == "empresa") {
+
+
+            }
+        }
+
+    </script>
 
     <!--aca cuadno no sea el particular que aparezca esto, ver lo que dijo el profe  -->
     <div class="formu1">
         <div class="nopersonal">
             <form action="#">
                 <h2> Datos del solicitante :</2>
-                    <p><label for="apellido">Apellido : <input type="apellido" id="apellido"></label></p>
-                    <p><label for="nombre">Nombres : <input type="nombre" id="nombre"></label></p>
-                    <p><label for="domicilio">Domicilio : <input type="domicilio" id="domicilio"></label></p>
-                    <p><label for="localidad">Localidad : <input type="localidad" id="localidad"></label></p>
-                    <p><label for="provincia">Provincia : <input type="provincia" id="provicia"></label></p>
+                    <p><label for="apellido">Apellido : <input type="texto" id="apellido"></label></p>
+                    <p><label for="nombre">Nombres : <input type="texto" id="nombre"></label></p>
+                    <p><label for="domicilio">Domicilio : <input type="texto" id="domicilio"></label></p>
+                    <p><label for="localidad">Localidad : <input type="texto" id="localidad"></label></p>
+                    <p><label for="provincia">Provincia : <input type="texto" id="provicia"></label></p>
                     <p><label>Documento tipo :
                             <select id="tipodni">
                                 <option value="dni">DNI</option>
                                 <option value="dnie">DNIE</option>
                             </select>
                         </label></p>
-                    <p><label for="numero">Número : <input type="numero" id="numero"></label></p>
-                    <p><label for="cuil">CUIL : <input type="cuil" id="cuil"></label></p>
+                    <p><label for="numero">Número : <input type="texto" id="numero"></label></p>
+                    <p><label for="cuil">CUIL : <input type="texto" id="cuil"></label></p>
                     <p><label>Genero :
                             <select id="genero">
                                 <option value="m">M</option>
@@ -69,7 +82,7 @@
                                 <option value="x">X</option>
                             </select>
                         </label></p>
-                    <p><label for="profesion">Profesión : <input type="profesion" id="profesion"></label></p>
+                    <p><label for="profesion">Profesión : <input type="texto" id="profesion"></label></p>
         </div>
         <script>
             function pepe(o) {

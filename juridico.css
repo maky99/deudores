@@ -35,7 +35,16 @@ header {
 
 /*requisitos*/
 .requisi {
-  text-align: left;
+  justify-content: space-between;
+  /*text-align: left;*/
+  display:inline-flex;
+  background-color: aqua;
+}
+nav{
+  
+  justify-content: space-between;
+  
+  background-color: rgb(161, 160, 217);
 }
 
 .listrequi {
@@ -71,11 +80,23 @@ header {
   background-color: rgb(31, 171, 47);
 }
 
-.formu1{
-display: ;
-padding-left: 20px;
-}
-formu1 h2{
-text-align: center;
 
+.formu1 input[type=texto], select{
+  width: 20%;
+  padding: 12px 20px;
+  margin: 2px 20px;
+  display:flex;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  box-sizing:content-box;
+}
+.formu1 {
+padding: 10px;
+background-color: rgb(227, 154, 220);
+}
+#tipodni{
+  width: auto; 
+}
+#genero{
+  width: auto; 
 }
