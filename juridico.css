@@ -37,12 +37,12 @@ header {
 .requisi {
   justify-content:space-around;
   display:flex;
-  background-color: aqua;
+  
 }
 nav{  
   display:flex; 
   justify-content: center;
-  background-color: rgb(161, 160, 217);
+  
 }
 
 .listrequi {
