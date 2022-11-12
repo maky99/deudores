@@ -1,27 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    
-    <title>Document</title>
-    <link rel="stylesheet" href="Llenar.css">
-    <script src="llena.js"></script>
-   
 
+<head>
+    <title>Document</title>
+   <!-- <link rel="stylesheet" href="Llenar.css">
+     <script src="llena.js"></script>-->
 </head>
+
 <body>
-    <div class="carousel">
-        <button id="retroceder">Retroceder</button>
-        <div id="imagen">
-            <img src="imagenes/banner.jpeg" alt="">
-            <img src="imagenes/puerta.jpeg" alt="">
+    <div id="imagen1">
+        <img src="paracarru/1.jpg" id="pricipal">
+    </div>
+    <div class="botones">
+        <div>
+            <button onclick="pasarFoto()">avan</button>
         </div>
-        <button id="avanzar">Avanzar</button>
+        <div>
+            <button onclick="volverFoto()">retro</button>
+        </div>
     </div>
-    <div class="controles">
-        <button id="play">Play</button>
-        <button id="stop" disabled>Stop</button>
-    </div>
-    
-    
+    <script>
+        let indice = 0;
+        let imagenes = ["paracarru/1.jpg", "paracarru/2.jpg",
+            "paracarru/3.jpg", "paracarru/4.jpg"];
+           
+        function pasarFoto() {
+            let fot = document.getElementById("principal");
+            if (indice >= imagenes.length - 1) {
+                indice = 0;
+            } else {
+                indice++;
+            }
+            fot.src=imagenes[indice];
+        }
+        function volverFoto() {
+            
+            if (indice <= 0) {
+                indice >= imagenes.length - 1;
+            } else {
+                indice--;
+            }
+            fot.src=imagenes[indice];
+        }
+    </script>
 </body>
 </html>

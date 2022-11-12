@@ -1,61 +1,36 @@
-window.onload = function () {
-    // Variables
-    const IMAGENES = [
-        'img/montanya.jpg',
-        'img/parque.jpg',
-        'img/palmeras.jpg'
-    ];
-    const TIEMPO_INTERVALO_MILESIMAS_SEG = 1000;
-    let posicionActual = 0;
-    let $botonRetroceder = document.querySelector('#retroceder');
-    let $botonAvanzar = document.querySelector('#avanzar');
-    let $imagen = document.querySelector('#imagen');
-    let $botonPlay = document.querySelector('#play');
-    let $botonStop = document.querySelector('#stop');
-    let intervalo;
+//dom
+const imagenes = document.querySelector(".imagenes");
+const Todasimgenes = document.querySelectorAll(".imagen");
+const avaBtn = document.querySelector(".ava");
+const retroBtn = document.querySelector(".retro");
+avaBtn.addEventListener("click",sigu)
+retroBtn.addEventListener("click", previa)
+let indice = 0;
+let intervalo = setInterval(inicioIntervalo, 2000);
+function inicioIntervalo() {
+    indice++
+    moverCarrusel();
+}
+function reste() {
+    clearInterval(intervalo)
+    intervalo=setInterval(inicioIntervalo,5000)
+}
+function moverCarrusel() {
 
-    // Funciones
-
-    /**
-     * Funcion que cambia la foto en la siguiente posicion
-     */
-    function pasarFoto() {
-        if(posicionActual >= IMAGENES.length - 1) {
-            posicionActual = 0;
-        } else {
-            posicionActual++;
-        }
-        renderizarImagen();
-    }
-
-    /**
-     * Funcion que cambia la foto en la anterior posicion
-     */
-    function retrocederFoto() {
-        if(posicionActual <= 0) {
-            posicionActual = IMAGENES.length - 1;
-        } else {
-            posicionActual--;
-        }
-        renderizarImagen();
-    }
-
-    /**
-     * Funcion que actualiza la imagen de imagen dependiendo de posicionActual
-     */
-    function renderizarImagen () {
-        $imagen.style.backgroundImage = `url(${IMAGENES[posicionActual]})`;
-    }
-
-    /**
-     * Activa el autoplay de la imagen
-     */
-    function playIntervalo() {
-        intervalo = setInterval(pasarFoto, TIEMPO_INTERVALO_MILESIMAS_SEG);
-        // Desactivamos los botones de control
-        $botonAvanzar.setAttribute('disabled', true);
-        $botonRetroceder.setAttribute('disabled', true);
-        $botonPlay.setAttribute('disabled', true);
-        $botonStop.removeAttribute('disabled');
-
-    }
+    if (indice >Todasimgenes.length-1) {
+        indice = 0
+    } else if (indice < 0) {
+        indice = Todasimgenes.length - 1
+    }    
+    imagenes.style.transform = `translateX(-${indice * 400}px)`    
+}
+function previa() {
+    indice --
+    reste()
+    moverCarrusel()
+}
+function sigu() {
+    indice++
+    reste()
+    moverCarrusel()
+}

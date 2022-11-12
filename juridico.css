@@ -35,14 +35,15 @@ header {
 
 /*requisitos*/
 .requisi {
-  justify-content:space-around;
-  display:flex;
-  
+  justify-content: space-around;
+  display: flex;
+
 }
-nav{  
-  display:flex; 
+
+nav {
+  display: flex;
   justify-content: center;
-  
+
 }
 
 .listrequi {
@@ -66,12 +67,14 @@ nav{
   ;
   background-color: aqua;
 }
+
 /*pongo el solicitado junto con el selector */
 .selecamb {
   display: flex;
   padding: 15px;
   margin: 0px;
 }
+
 .selec {
   margin: 0px;
   padding-right: 15px;
@@ -79,22 +82,27 @@ nav{
 }
 
 
-.formu1 input[type=texto], select{
+.formu1 input[type=texto],
+select {
   width: 20%;
   padding: 12px 20px;
   margin: 2px 20px;
-  display:flex;
+  display: flex;
   border: 1px solid #ccc;
   border-radius: 50px;
-  box-sizing:content-box;
+  box-sizing: content-box;
 }
-.formu1 {
-padding: 10px;
-background-color: rgb(227, 154, 220);
+
+formu1 {
+ display: none;
+  padding: 10px;
+  background-color: rgb(227, 154, 220);
 }
-#tipodni{
-  width: auto; 
+
+#tipodni {
+  width: auto;
 }
-#genero{
-  width: auto; 
+
+#genero {
+  width: auto;
 }
