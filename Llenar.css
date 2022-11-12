@@ -1,20 +1,40 @@
-*{
-  box-sizing: border-box;
-}
-html,body{
-  height: 100%;
-}
-body{
-  font-family: sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/*este va con comollenarlo.html y llena.js*/
 
+header {
+  display: flex;
+  height: 75%;
+  background-color: rgb(250, 119, 241);
+  justify-content: center;
+  /*donde quiero poner el contenido*/
+  align-items: flex-end;
+  /*centrar logo y texto*/
+  padding: 10px;
 }
-.carrusel{
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 80%;
+  /*tamaño de la imagen del logo */
+  margin-right: 30px;
+  /*margen con el texto*/
+}
+
+.segundo {
+  display: flex;
+  justify-content: space-between;
+  background-color: red;
+  margin: 3px;
+  padding: 5px;
+}
+
+
+.carrusel{ 
 width: 500px;
 height: 500px;
-overflow: hidden;
+overflow:hidden;
 
 }
 .imagenes{
@@ -34,4 +54,17 @@ border: none;
 background-color: aqua;
 flex-basis: 33%;
 cursor: pointer;
+}
+footer{
+  
+  display: flex;/*todo en la misma linea*/
+  height: 30%;/*alto */
+  background-color: aqua;
+  align-items: center;/*alineo al centro*/
+  justify-content: space-evenly;/*le doy espacio ente los parrafos*/ 
+
+}
+
+footer p{
+  font-weight: bolder;/*le digo que quede negra la letra*/
 }

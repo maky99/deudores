@@ -86,7 +86,7 @@
                             </select>
                         </label></p>
                     <p><label for="numero">Número : <input type="texto" id="numero"></label></p>
-                    <p><label for="cuil">CUIL : <input type="texto" id="cuil"></label></p>
+                    <p><label for="cuil">Cuil : <input type="texto" id="cuil"></label></p>
                     <p><label>Genero :
                             <select id="genero">
                                 <option value=""></option>
@@ -100,53 +100,57 @@
         </div>
     </div>
 
-    <button type="button" onclick="capturainformacion()"> Cargar Solicitante</button>
-    <form action="datosSolicita">
-        <h2><ins> Datos de la persona sobre la quien se solicita la información: </ins></2>
-            <p><label for="apellido">Apellido : <input type="apellido" id="f2apellido"></label></p>
-            <p><label for="nombre">Nombres : <input type="nombre" id="f2nombre"></label></p>
-            <p><label>Documento tipo :
-                    <select id="f2tipodni">
-                        <option value="dni">DNI</option>
-                        <option value="dnie">DNIE</option>
-                    </select>
-                </label></p>
-            <p><label for="numero">Número : <input type="numero" id="f2numero"></label></p>
-            <p><label for="cuil">CUIL : <input type="cuil" id="f2cuil"></label></p>
-            <p><label for="domicilio">Domicilio : <input type="domicilio" id="f2domicilio"></label></p>
-            <p><label for="localidad">Localidad : <input type="localidad" id="f2localidad"></label></p>
-            <p><label for="provincia">Provincia : <input type="provincia" id="f2provincia"></label></p>
-            <p><label for="nacionalidad">Nacionalidad : <input type="nacionalidad" id="f2nacionalidad"></label></p>
-            <p><label for="fechanacimiento">Fecha de Nacimiento : <input type="date" id="f2fechanacimiento" name="algo" min="2000-01-02"></label></p>
+    <button id="boton" type="button" onclick="capturainformacion()"> Cargar Solicitante</button>
 
-            <p><label>Genero :
-                    <select id="f2genero">
-                        <option value=""></option>
-                        <option value="m">M</option>
-                        <option value="f">F</option>
-                        <option value="x">X</option>
-                    </select>
-                </label></p>
-            <p><label for="profesion">Profesión : <input type="profesion" id="f2profesion"></label></p>
-          
+    <div id="formu2">
+        <form action="datosSolicita">
+            <h2><ins> Datos de la persona sobre la quien se solicita la información: </ins></2>
+                <p><label for="apellido">Apellido : <input type="texto2" id="f2apellido"></label></p>
+                <p><label for="nombre">Nombres : <input type="texto2" id="f2nombre"></label></p>
+                <p><label>Documento tipo :
+                        <select id="f2tipodni">
+                            <option value="dni">DNI</option>
+                            <option value="dnie">DNIE</option>
+                        </select>
+                    </label></p>
+                <p><label for="numero">Número : <input type="texto2" id="f2numero"></label></p>
+                <p><label for="cuil">Cuil : <input type="texto2" id="f2cuil"></label></p>
+                <p><label for="domicilio">Domicilio : <input type="texto2" id="f2domicilio"></label></p>
+                <p><label for="localidad">Localidad : <input type="texto2" id="f2localidad"></label></p>
+                <p><label for="provincia">Provincia : <input type="texto2" id="f2provincia"></label></p>
+                <p><label for="nacionalidad">Nacionalidad : <input type="texto2" id="f2nacionalidad"></label></p>
+                <p><label for="fechanacimiento">Fecha de Nacimiento : <input type="texto2" id="f2fechanacimiento"
+                            name="algo" min="2000-01-02"></label></p>
+
+                <p><label>Genero :
+                        <select id="f2genero">
+                            <option value=""></option>
+                            <option value="M">M</option>
+                            <option value="F">F</option>
+                            <option value="X">X</option>
+                        </select>
+                    </label></p>
+                <p><label for="profesion">Profesión : <input type="texto2" id="f2profesion"></label></p>
+
         </form>
-            <h2><ins>Indicar el Organismo donde se presentará el certificado emitido:</ins></h2>
+    </div>
+    <h2><ins>Indicar el Organismo donde se presentará el certificado emitido:</ins></h2>
 
-            <select id="solsdadai">
-                <option value="particular">Particular</option>
-                <option value="muni/comuna">Municipalidad/Comuna</option>
-                <option value="poderejecutivo">Poder Ejecutivo de la Provincia de San Luis</option>
-                <option value="direPersJuri">Direción de Personas Jurídicas</option>
-                <option value="poderLegislativo">Poder Legislativo de la Provincia de San Luis</option>
-                <option value="compraContra">Programa Compras y Contrataciones</option>
-                <option value="poderJudicial">Poder Judiccial de la Provincia de San Luis</option>
-                <option value="vivienda">Munisterio de Vivienda</option>
-                <option value="majistratura">Consejo de la Magistratura</option>
-                <option value="tribuElectora">Tribunal Electoral de la Provincia de San Luis</option>
-                <option value="orgPublicos">Otros Organismos Públicos</option>
-                <option value="empresaPrivada">Organismos y Empresas Privadas</option>
-            </select>
-            <button type="button" onclick="capturaInformacionf2()"> Cargar</button>
+    <select id="solsdadai">
+        <option value="particular">Particular</option>
+        <option value="muni/comuna">Municipalidad/Comuna</option>
+        <option value="poderejecutivo">Poder Ejecutivo de la Provincia de San Luis</option>
+        <option value="direPersJuri">Direción de Personas Jurídicas</option>
+        <option value="poderLegislativo">Poder Legislativo de la Provincia de San Luis</option>
+        <option value="compraContra">Programa Compras y Contrataciones</option>
+        <option value="poderJudicial">Poder Judiccial de la Provincia de San Luis</option>
+        <option value="vivienda">Munisterio de Vivienda</option>
+        <option value="majistratura">Consejo de la Magistratura</option>
+        <option value="tribuElectora">Tribunal Electoral de la Provincia de San Luis</option>
+        <option value="orgPublicos">Otros Organismos Públicos</option>
+        <option value="empresaPrivada">Organismos y Empresas Privadas</option>
+    </select>
+    <button id="boton" type="button" onclick="capturaInformacionf2()"> Cargar</button>
     <footer>
         <p> Administrativo en Ayacucho 945 (ex Casa de Gobierno) – Planta Baja</p>
         <p>registrodeudoresmorosossanluis@gmail.com</p>
