@@ -50,26 +50,6 @@
         </select>
         </form>
     </div>
-
-    <script>
-        function tomavalor() {
-            var tomo = document.getElementById("titra").value;//aca tomo lo que selecciona el de opciones
-            //document.getElementById("formu1").innerHTML="puto salio? " + tomo;
-            if (tomo == "particular") {
-                mostrar();
-
-            } else {
-
-            }
-        };
-        function mostrar() {
-            alert("salio");
-            document.getElementById(".formu1").style.display = "none";
-        }
-    </script>
-
-
-    <!--aca cuadno no sea el particular que aparezca esto, ver lo que dijo el profe  -->
     <div id="formu1">
         <div class="nopersonal">
             <form action="#">
@@ -96,11 +76,12 @@
                             </select>
                         </label></p>
                     <p><label for="profesion">Profesión : <input type="texto" id="profesion"></label></p>
+                    <button id="boton" type="button" onclick="capturainformacion()"> Cargar Solicitante</button>
             </form>
         </div>
     </div>
 
-    <button id="boton" type="button" onclick="capturainformacion()"> Cargar Solicitante</button>
+   
 
     <div id="formu2">
         <form action="datosSolicita">

@@ -94,7 +94,7 @@ select {
 }
 
 #formu1 {
- 
+  display: none; 
   padding: 10px;
   background-color: rgb(227, 154, 220);
 }
