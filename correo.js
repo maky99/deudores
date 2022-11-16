@@ -8,46 +8,51 @@ function capturainformacion() {
     //le digo donde voy a mostrar el msj
     let correcto = true;
     let sale = document.getElementById("muestra");
-    let msj = "";
+    sale.innerHTML = "";
+    let msj;
     //valido los campos que no esten en blanco 
     if (apelli.trim() == "") {
         msj = document.createElement("ol");
-        sale.innerHTML = "Campo apellido vacio ";
+        msj.innerHTML = "Completar Apellido ";
         sale.appendChild(msj);
         correcto = false;
         apelli = document.getElementById("apellido").focus();
-    } else if (nomb.trim() == "") {
+    }
+    if (nomb.trim() == "") {
         msj = document.createElement("ol");
-        sale.innerHTML = "Campo nombre Vacio";
+        msj.innerHTML = "Completar Nombre";
         sale.appendChild(msj);
         correcto = false;
         nomb = document.getElementById("nombre").focus();
-    } else if (domi.trim() == "") {
+    }
+    if (domi.trim() == "") {
         msj = document.createElement("ol");
-        sale.innerHTML = "Campo domicilio vacio ";
+        msj.innerHTML = "Completar Domicilio ";
         sale.appendChild(msj);
         correcto = false;
         domi = document.getElementById("domicilio").focus();
-    } else if (tel.trim() == "") {
+    }
+    if (tel.trim() == "") {
         msj = document.createElement("ol");
-        sale.innerHTML = "Campo tel vacio";
+        msj.innerHTML = "Completar Telefono";
         sale.appendChild(msj);
         correcto = false;
         tel = document.getElementById("telefono").focus();
-    } else {
+    }
+    if ((!tel == "") & (!domi == "") & (!nomb == "") & (!apelli == "")) {
         msj = document.createElement("ol");
-        sale.innerHTML = "";
+        msj.innerHTML = "";
         sale.appendChild(msj);
         correcto = true;
     }
-
     if (correcto) {
         alert("Mensaje Enviado");
-        console.log( apelli + " " + nombre + " " + domi + " "+ tel);
-        apelli = document.getElementById("apellido").value="";
-        nomb = document.getElementById("nombre").value="";
-        domi = document.getElementById("domicilio").value="";
-        tel = document.getElementById("telefono").value="";
+        console.log(apelli + " " + nomb);
+        console.log(domi + " " + tel);
+        apelli = document.getElementById("apellido").value = "";
+        nomb = document.getElementById("nombre").value = "";
+        domi = document.getElementById("domicilio").value = "";
+        tel = document.getElementById("telefono").value = "";
         apelli = document.getElementById("apellido").focus();
 
     }

@@ -10,28 +10,37 @@ function capturainformacion() {
     var cui = document.getElementById("cuil").value;
     var gene = document.getElementById("genero").value;
     var prof = document.getElementById("profesion").value;
-    let pepe="salir";
+    let correcto = true;
     if (apelli == "") {
         alert("Completar Apellido");
         document.getElementById("apellido").focus();
-    } else if (nomb == "") {
+        correcto=false;
+    } 
+    if (nomb == "") {
         alert("Completar Nombre");
         document.getElementById("nombre").focus();
-    } else if (domi == "") {
+        correcto=false;
+    } 
+    if (domi == "") {
         alert("Completar Domicilio");
         document.getElementById("domicilio").focus();
-    } else if (loca == "") {
+        correcto=false;
+    } 
+    if (loca == "") {
         alert("Completar Localidad");
         document.getElementById("localidad").focus();
-    } else if (prov == "") {
+        correcto=false;
+    } 
+    if (prov == "") {
         alert("Completar provincia");
         document.getElementById("provincia").focus();
-    } else if (numdni == "") {
+        correcto=false;
+    } 
+    if (numdni == "") {
         alert("Completar Número de Dni");
         document.getElementById("numero").focus();
+        correcto=false;
     }
-    
-    
     let resul=pattern.test(cui);
     if (resul) {
          if (verifyCuit(cui)) {
@@ -40,6 +49,7 @@ function capturainformacion() {
             alert("Completar");
             document.getElementById("cuil").focus();
             cui = document.getElementById("cuil").value;
+            correcto=false;
         }    
         
     }    else {
@@ -49,10 +59,17 @@ function capturainformacion() {
     if (gene == "") {
         alert("Completar Genero");
         document.getElementById("genero").focus();
-    } else if (prof == "") {
+        correcto=false;
+    } 
+    if (prof == "") {
         alert("Completar Profesión");
         document.getElementById("profesion").focus();
-    } else {
+        correcto=false;
+    } 
+if ((!prof == "")&(!gene == "")&(verifyCuit(cui))&(!numdni == "")&(!prov == "")&(!loca == "")&(!domi == "" )& (!nomb == "") & (!apelli == "")) {
+    correcto = true;
+}
+    if (correcto) {
         console.log(apelli + " " + nomb);//aca muestro en la consola
         console.log(domi + " Loca " + loca + " Prov " + prov);
         console.log(dni + " Numero " + numdni + " Cuil " + cui);
@@ -69,9 +86,12 @@ function capturainformacion() {
         document.getElementById("genero").value = "";
         document.getElementById("profesion").value = "";
         //vuelvo a hacer foco en pellido
-        document.getElementById("apellido").focus();
+        document.getElementById("apellido").focus(); 
     }
-}
+
+       
+    }
+
 function verifyCuit(cuit){
     
     if (cuit.length !== 11) {
