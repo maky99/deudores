@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Correo</title>
+    <link rel="stylesheet" href="correo.css">
+    <script src="correo.js"></script>
+</head>
+<body>
+    <div id="conta">
+        <form action="" class="todo">
+            <h3>Contacto</h3>
+            <label for="correo">Correo Electronico : <input type="texto" value ="registrodeudoresmorosossanluis@gmail.com " disabled id="correo"></label>
+            <p><label for="apellido">Apellido : <input type="texto" id="apellido"></label></p>
+            <p><label for="nombre">Nombres : <input type="texto" id="nombre"></label></p>
+            <p><label for="domicilio">Domicilio : <input type="texto" id="domicilio"></label></p>
+            <p><label for="telefono">Telefono : <input type="texto" id="telefono"></label></p>
+            <label for="Obse">Mensaje : </label>
+            <br>
+            <textarea name="obs" id="comentario" cols="30" rows="10"></textarea>
+        </form>
+        <button id="boton" type="button" onclick="capturainformacion()"> Enviar</button>
+    </div>
+    <div id="muestra">
+        
+    </div>
+</body>
+</html>

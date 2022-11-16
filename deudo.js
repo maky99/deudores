@@ -1,3 +1,4 @@
+let pattern = /^[0-9]+$/;
 function capturainformacion() {
     var apelli = document.getElementById("apellido").value;
     var nomb = document.getElementById("nombre").value;
@@ -9,6 +10,7 @@ function capturainformacion() {
     var cui = document.getElementById("cuil").value;
     var gene = document.getElementById("genero").value;
     var prof = document.getElementById("profesion").value;
+    let pepe="salir";
     if (apelli == "") {
         alert("Completar Apellido");
         document.getElementById("apellido").focus();
@@ -27,10 +29,24 @@ function capturainformacion() {
     } else if (numdni == "") {
         alert("Completar Número de Dni");
         document.getElementById("numero").focus();
-    } else if (cui == "") {
-        alert("Completar Número de Cuil");
-        document.getElementById("cuil").focus();
-    } else if (gene == "") {
+    }
+    
+    
+    let resul=pattern.test(cui);
+    if (resul) {
+         if (verifyCuit(cui)) {
+            alert("bien entro ak");
+            }else{
+            alert("Completar");
+            document.getElementById("cuil").focus();
+            cui = document.getElementById("cuil").value;
+        }    
+        
+    }    else {
+        alert("esto no es un CUIT el formato correcto es XXXXXXXXXXX")
+    }
+    
+    if (gene == "") {
         alert("Completar Genero");
         document.getElementById("genero").focus();
     } else if (prof == "") {
@@ -56,6 +72,29 @@ function capturainformacion() {
         document.getElementById("apellido").focus();
     }
 }
+function verifyCuit(cuit){
+    
+    if (cuit.length !== 11) {
+        return false;
+    }
+  
+    let acumulado = 0;
+    let digitos = cuit.split('');
+    let digito = parseInt(digitos.pop());
+  
+    for (let i = 0; i < digitos.length; i++) {
+      acumulado += digitos[9 - i] * (2 + (i % 6));
+    }
+  
+    let verif = 11 - (acumulado % 11);
+    if (verif === 11) {
+      verif = 0;
+    } else if (verif === 10) {
+      verif = 9;
+    }
+  
+    return digito === verif;
+  }
 
 function capturaInformacionf2() {
     var f2apelli = document.getElementById("f2apellido").value;
@@ -128,31 +167,10 @@ function capturaInformacionf2() {
         document.getElementById("f2apellido").focus();
     }
     
-
-    const verifyCuit = (cuit) => {
-        if (cuit.length !== 11) {
-          return false;
-        }
-      
-        let acumulado = 0;
-        let digitos = cuit.split('');
-        let digito = parseInt(digitos.pop());
-      
-        for (let i = 0; i < digitos.length; i++) {
-          acumulado += digitos[9 - i] * (2 + (i % 6));
-        }
-      
-        let verif = 11 - (acumulado % 11);
-        if (verif === 11) {
-          verif = 0;
-        } else if (verif === 10) {
-          verif = 9;
-        }
-      
-        return digito === verif;
-      };
       
 }
+
+
 function tomavalor() {
     var tomo = document.getElementById("titra").value;//aca tomo lo que selecciona el de opciones
     //document.getElementById("formu1").innerHTML="puto salio? " + tomo;

@@ -1,0 +1,53 @@
+body {
+    margin: 0px;
+  }
+
+header {
+    display: flex;
+    height: 75%;
+    background-color: rgb(250, 119, 241);
+    justify-content: center;  /*donde quiero poner el contenido*/
+    align-items: center;
+    /*centrar logo y texto*/
+    padding: 10px;
+  }
+
+
+.segundo {
+    display: flex;
+    justify-content: space-between;
+    background-color: red;
+    margin: 3px;
+    padding: 5px;
+  }
+.carrusel {
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+}
+#imagens {
+    align-content: center;
+    align-items: center;
+    width: 50%;
+    height: 400px;
+    background-size: cover;
+}
+.control{
+    text-align: center;
+}
+.controles{
+    text-align: center;
+}
+footer{
+  
+    display: flex;/*todo en la misma linea*/
+    height: 30%;/*alto */
+    background-color: aqua;
+    align-items: center;/*alineo al centro*/
+    justify-content: space-evenly;/*le doy espacio ente los parrafos*/ 
+  
+  }
+  footer p{
+    font-weight: bolder;/*le digo que quede negra la letra*/
+  }

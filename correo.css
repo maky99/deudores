@@ -1,0 +1,15 @@
+#conta {
+    padding: 10px;
+    background-color: rgb(227, 154, 220);
+
+}
+.todo input[type=texto],
+select {
+  width: 20%;
+  padding: 12px 20px;
+  margin: 2px 20px;
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  box-sizing: content-box;
+}
