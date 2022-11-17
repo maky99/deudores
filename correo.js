@@ -54,6 +54,7 @@ function capturainformacion() {
         domi = document.getElementById("domicilio").value = "";
         tel = document.getElementById("telefono").value = "";
         apelli = document.getElementById("apellido").focus();
+        window.location.href="index.html";
 
     }
     else {

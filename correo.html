@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,21 +9,39 @@
     <link rel="stylesheet" href="correo.css">
     <script src="correo.js"></script>
 </head>
+
 <body>
-    <div id="conta">
-        <form action="" class="todo">
-            <h3>Contacto</h3>
-            <label for="correo">Correo Electronico : <input type="texto" value ="registrodeudoresmorosossanluis@gmail.com " disabled id="correo"></label>
-            <p><label for="apellido">Apellido : <input type="texto" id="apellido"></label></p>
-            <p><label for="nombre">Nombres : <input type="texto" id="nombre"></label></p>
-            <p><label for="domicilio">Domicilio : <input type="texto" id="domicilio"></label></p>
-            <p><label for="telefono">Telefono : <input type="texto" id="telefono"></label></p>
-            <label for="Obse">Mensaje : </label>
-            <br>
-            <textarea name="obs" id="comentario" cols="30" rows="10"></textarea>
-        </form>
-        <button id="boton" type="button" onclick="capturainformacion()"> Enviar</button>
+    <header>
+        <a href="#" class="logo">
+            <img src="imagenes\esc2.png" alt="Escudo de san Luis">
+            <h1>Ministerio de Gobierno Justicia y Culto</h1>
+        </a>
+    </header>
+
+    <div class="segundo">
+        <p>DIRECCIÒN PROVINCIAL DE REGISTRO DE DEUDORES ALIMENTARIOS MOROSOS</p>
+        <p class="malvi">“ Las Malvinas son argentina ”</p>
     </div>
-    <div id="muestra"></div>
+    <hr>
+    <div id="gral">
+        <div id="conta">
+            <form action="" class="todo">
+                <h3>Contacto</h3>
+                <label for="correo">Correo Electronico : <input type="texto"
+                        value="registrodeudoresmorosossanluis@gmail.com " disabled id="correo"></label>
+                <p><label for="apellido">Apellido : <input type="texto" id="apellido"></label></p>
+                <p><label for="nombre">Nombres : <input type="texto" id="nombre"></label></p>
+                <p><label for="domicilio">Domicilio : <input type="texto" id="domicilio"></label></p>
+                <p><label for="telefono">Telefono : <input type="texto" id="telefono"></label></p>
+
+                <label for="Obse" id="observacion">Mensaje : </label>
+                <br>
+                <textarea name="obs" id="comentario" cols="30" rows="10"></textarea>
+            </form>
+            <button id="boton" type="button" onclick="capturainformacion()"> Enviar</button>
+        </div>
+        <div id="muestra"></div>
+    </div>
 </body>
+
 </html>

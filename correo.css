@@ -1,11 +1,35 @@
+
+
 #conta {
-    padding: 10px;
-    background-color: rgb(227, 154, 220);
+  margin: 15px;
+  border: 5px solid red;
+  padding: 15px;
+  width: 400px;
+  height: 750px;
+  background-color: aquamarine;
 
 }
+header {
+  display: flex;
+  height: 75%;
+  background-color: rgb(250, 119, 241);
+  justify-content: center;  /*donde quiero poner el contenido*/
+  align-items: center;
+  /*centrar logo y texto*/
+  padding: 10px;
+}
+
+.segundo {
+  display: flex;
+  justify-content: space-between;
+  background-color: red;
+  margin: 3px;
+  padding: 5px;
+}
+
 .todo input[type=texto],
 select {
-  width: 20%;
+  width: 80%;
   padding: 12px 20px;
   margin: 2px 20px;
   display: flex;
@@ -13,7 +37,32 @@ select {
   border-radius: 50px;
   box-sizing: content-box;
 }
-#boton{
-border-radius: 40px;
 
+#comentario {
+  margin: 2px 20px;
+  width: 85%;
+  border-radius: 8px;
+  box-sizing: content-box;
+}
+
+#muestra {
+  margin: 55px;
+  padding-right: 25px;
+  display:inline-block; 
+  color:red;
+
+}
+
+#gral {
+  display: flex;
+  padding: 0px;
+  margin: 10px;
+  /* si lo pongo me queda feo*/
+  padding: 20px;
+  font-size: 20px;
+
+}
+
+#boton {
+  border-radius: 40px;
 }
