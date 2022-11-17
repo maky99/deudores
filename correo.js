@@ -5,6 +5,7 @@ function capturainformacion() {
     let nomb = document.getElementById("nombre").value;
     let domi = document.getElementById("domicilio").value;
     let tel = document.getElementById("telefono").value;
+    let mensaje= document.getElementById("comentario").value;
     //le digo donde voy a mostrar el msj
     let correcto = true;
     let sale = document.getElementById("muestra");
@@ -39,7 +40,15 @@ function capturainformacion() {
         correcto = false;
         tel = document.getElementById("telefono").focus();
     }
-    if ((!tel == "") & (!domi == "") & (!nomb == "") & (!apelli == "")) {
+    if (mensaje=="") {
+        msj = document.createElement("ol");
+        msj.innerHTML = "Completar Mensaje";
+        sale.appendChild(msj);
+        correcto = false;
+        tel = document.getElementById("comentario").focus();
+       
+    }
+    if ((!tel == "") & (!domi == "") & (!nomb == "") & (!apelli == "")&(!mensaje=="")) {
         msj = document.createElement("ol");
         msj.innerHTML = "";
         sale.appendChild(msj);

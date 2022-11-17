@@ -38,7 +38,10 @@ header {
 .requisi {
   justify-content: space-around;
   display: flex;
-
+}
+#titra{
+  width: 30%;
+  font-size: 1.2em;
 }
 
 nav {
@@ -78,19 +81,21 @@ nav {
 .selec {
   margin: 0px;
   padding-right: 15px;
-  background-color: rgb(31, 171, 47);
+  text-align: center;
+  padding-top: 10px;
 }
 
 
 #formu1 input[type=texto],
 select {
-  width: 20%;
+  width: 30%;
   padding: 12px 20px;
   margin: 2px 20px;
   display: flex;
   border: 1px solid #ccc;
   border-radius: 50px;
   box-sizing: content-box;
+  font-size: 1em;
 }
 
 #formu1 {
@@ -100,6 +105,17 @@ select {
 }
 #formu2 input[type=texto2],
 select {
+  width: 40%;
+  padding: 12px 20px;
+  margin: 2px 20px;
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  box-sizing: content-box;
+  font-size: 1em;
+}
+#formu2 input[type=date],
+select {
   width: 20%;
   padding: 12px 20px;
   margin: 2px 20px;
@@ -107,9 +123,11 @@ select {
   border: 1px solid #ccc;
   border-radius: 50px;
   box-sizing: content-box;
+  font-size: 1em;
 }
 #formu2{
-background-color: aquamarine;
+background-color:rgb(237, 192, 192);
+padding-bottom: 10px;
 }
 
 #tipodni {
@@ -129,7 +147,9 @@ background-color: aquamarine;
 }
 
 #solsdadai{
-  width: auto;
+  
+  width: 40%;
+  font-size: 1.2em;
 
 }
 

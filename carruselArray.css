@@ -1,15 +1,25 @@
 
   
 
+
 header {
-    display: flex;
-    height: 75%;
-    background-color: rgb(250, 119, 241);
-    justify-content: center;  /*donde quiero poner el contenido*/
-    align-items: center;
-    /*centrar logo y texto*/
-    padding: 10px;
-  }
+  display: flex;
+  height: 75%;
+  background-color: rgb(250, 119, 241);
+  justify-content: center;  /*donde quiero poner el contenido*/
+  align-items: center;
+  /*centrar logo y texto*/
+  padding: 10px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 80%;  /*tamaño de la imagen del logo */
+  margin-right: 30px;  /*margen con el texto*/
+}
 
 
 .segundo {
