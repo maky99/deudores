@@ -1,9 +1,9 @@
 
 window.onload = function () {
     const IMAGENES = ["paracarru/1.jpg", "paracarru/2.jpg",
-    "paracarru/3.jpg", "paracarru/4.jpg", "paracarru/5.jpg"];
+    "paracarru/3.jpg", "paracarru/4.jpg", "paracarru/5.jpg","paracarru/6.jpg"];
 
-    const TIEMPO_INTERVALO_MILESIMAS_SEG = 1000;
+    const TIEMPO_INTERVALO_MILESIMAS_SEG = 4000;
     let posicionActual = 0;
     let $botonRetroceder = document.querySelector('#retroceder');
     let $botonAvanzar = document.querySelector('#avanzar');
