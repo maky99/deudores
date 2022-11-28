@@ -97,6 +97,20 @@ select {
   box-sizing: content-box;
   font-size: 1em;
 }
+#muestra {
+  margin: 55px;
+  padding-right: 25px;
+  display:inline-block; 
+  color:rgb(16, 12, 12);
+  font-size: 25px;
+}
+#muestra2 {
+  margin: 55px;
+  padding-right: 25px;
+  display:inline-block; 
+  color:rgb(58, 44, 250);
+  font-size: 25px;
+}
 
 #formu1 {
   display: none; 

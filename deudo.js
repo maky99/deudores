@@ -11,33 +11,48 @@ function capturainformacion() {
     var gene = document.getElementById("genero").value;
     var prof = document.getElementById("profesion").value;
     let correcto = true;
+    let sale = document.getElementById("muestra");
+    sale.innerHTML = "";
+    let msj;
     if (apelli == "") {
-        alert("Completar Apellido");
+        msj = document.createElement("ol");
+        msj.innerHTML = "Completar Apellido ";
+        sale.appendChild(msj);
         document.getElementById("apellido").focus();
         correcto = false;
     }
     if (nomb == "") {
-        alert("Completar Nombre");
+        msj = document.createElement("ol");
+        msj.innerHTML = "Completar Nombre ";
+        sale.appendChild(msj);
         document.getElementById("nombre").focus();
         correcto = false;
     }
     if (domi == "") {
-        alert("Completar Domicilio");
+        msj = document.createElement("ol");
+        msj.innerHTML = "Completar Domicilo ";
+        sale.appendChild(msj);
         document.getElementById("domicilio").focus();
         correcto = false;
     }
     if (loca == "") {
-        alert("Completar Localidad");
+        msj = document.createElement("ol");
+        msj.innerHTML = "Completar Localidad ";
+        sale.appendChild(msj);
         document.getElementById("localidad").focus();
         correcto = false;
     }
     if (prov == "") {
-        alert("Completar provincia");
+        msj = document.createElement("ol");
+        msj.innerHTML = "Completar provincia";
+        sale.appendChild(msj);
         document.getElementById("provincia").focus();
         correcto = false;
     }
-    if (numdni == "") {
-        alert("Completar Número de Dni");
+    if (dni == "") {
+        msj = document.createElement("ol");
+        msj.innerHTML = "Completar Número de Dni";
+        sale.appendChild(msj);
         document.getElementById("numero").focus();
         correcto = false;
     }
@@ -46,25 +61,32 @@ function capturainformacion() {
     if (resul) {
         if (verifyCuit(cui)) {
         } else {
-            alert("Completar");
+            msj = document.createElement("ol");
+            msj.innerHTML = "Falta completar Cuil";
+            sale.appendChild(msj);
             document.getElementById("cuil").focus();
             cui = document.getElementById("cuil").value;
-            alert("esto no es un CUIT el formato correcto es XX00000000X")
+            alert("esto no es un CUIL el formato correcto es XX00000000X")
             correcto = false;
         }
-
     } else {
         correcto = false;
-        alert("esto no es un CUIT el formato correcto es XX11111111X")
+        msj = document.createElement("ol");
+        msj.innerHTML = "Formato correcto de  CUIT es XX11111111X";
+        sale.appendChild(msj);
     }
 
     if (gene == "") {
-        alert("Completar Genero");
+        msj = document.createElement("ol");
+        msj.innerHTML = "Completar Genero";
+        sale.appendChild(msj);
         document.getElementById("genero").focus();
         correcto = false;
     }
     if (prof == "") {
-        alert("Completar Profesión");
+        msj = document.createElement("ol");
+        msj.innerHTML = "Completar Profesión";
+        sale.appendChild(msj);
         document.getElementById("profesion").focus();
         correcto = false;
     }
@@ -72,12 +94,49 @@ function capturainformacion() {
         correcto = true;
     }
     if (correcto) {
-        console.log(apelli + " " + nomb);//aca muestro en la consola
-        console.log(domi + " Loca " + loca + " Prov " + prov);
-        console.log(dni + " Numero " + numdni + " Cuil " + cui);
-        console.log(gene + " Profe " + prof);
-        alert("Se cargo con exito");
-        alert("Continuar llenando el siguiente formulario");
+        msj = document.createElement("ol");
+        msj.innerHTML = "Su Formulario tiene la siguiente informacion : "
+        sale.appendChild(msj);
+        //apellido
+        msj = document.createElement("ol");
+        msj.innerHTML = "Apellido : " + apelli;
+        sale.appendChild(msj);
+        //nombre
+        msj = document.createElement("ol");
+        msj.innerHTML = "Nombre : " + nomb;
+        sale.appendChild(msj);
+        //domicilio
+        msj = document.createElement("ol");
+        msj.innerHTML = "Domicilo : " + domi;
+        sale.appendChild(msj);
+        //localidad
+        msj = document.createElement("ol");
+        msj.innerHTML = "Localidad :" + loca;
+        sale.appendChild(msj);
+        //provincia
+        msj = document.createElement("ol");
+        msj.innerHTML = "Provincia : " + prov;
+        sale.appendChild(msj);
+        //dni
+        msj = document.createElement("ol");
+        msj.innerHTML = "Dni :" + dni;
+        sale.appendChild(msj);
+        //cuil
+        msj = document.createElement("ol");
+        msj.innerHTML = "Cuil :" + cui;
+        sale.appendChild(msj);
+        //genero
+        msj = document.createElement("ol");
+        msj.innerHTML = "Genero : " + gene;
+        sale.appendChild(msj);
+        //profe
+        msj = document.createElement("ol");
+        msj.innerHTML = "Profesión : " + prof;
+        sale.appendChild(msj);
+        //mensaje
+        msj = document.createElement("ol");
+        msj.innerHTML = "Complete el Siguiente Formulario : "
+        sale.appendChild(msj);
         //vacio los campos
         document.getElementById("apellido").value = "";
         document.getElementById("nombre").value = "";
@@ -92,8 +151,6 @@ function capturainformacion() {
         document.getElementById("apellido").focus();
         ocultar();
     }
-
-
 }
 
 function verifyCuit(cuit) {
@@ -135,18 +192,27 @@ function capturaInformacionf2() {
     var f2prof = document.getElementById("f2profesion").value;
     var tomo = document.getElementById("solsdadai").value;
     let correcto = true;
+    let sale = document.getElementById("muestra2");
+    sale.innerHTML = "";
+    let msj;
     if (f2apelli == "") {
-        alert("Completar Apellido");
+        msj = document.createElement("ol");
+        msj.innerHTML = "Completar Apellido ";
+        sale.appendChild(msj);
         document.getElementById("f2apellido").focus();
         correcto = false;
     }
     if (f2nomb == "") {
-        alert("Completar Nombre");
+        msj = document.createElement("ol");
+        msj.innerHTML = "Completar Nombre ";
+        sale.appendChild(msj);
         document.getElementById("f2nombre").focus();
         correcto = false;
     }
     if (f2numdni == "") {
-        alert("Completar Número de Dni");
+        msj = document.createElement("ol");
+        msj.innerHTML = "Completar Numero de DNI ";
+        sale.appendChild(msj);
         document.getElementById("f2numero").focus();
         correcto = false;
     }
@@ -156,61 +222,121 @@ function capturaInformacionf2() {
     if (resul) {
         if (verifyCuit(f2cui)) {
         } else {
-            alert("Completar");
+            msj = document.createElement("ol");
+            msj.innerHTML = "Falta completar Cuil";
+            sale.appendChild(msj);
             document.getElementById("f2cuil").focus();
             f2cui = document.getElementById("f2cuil").value;
             alert("esto no es un CUIT el formato correcto es XX00000000X")
             correcto = false;
         }
-
     } else {
         correcto = false;
-        alert("esto no es un CUIT el formato correcto es XX11111111X")
+        msj = document.createElement("ol");
+        msj.innerHTML = "Formato correcto de  CUIT es XX11111111X";
+        sale.appendChild(msj);
     }
 
     if (f2domi == "") {
-        alert("Completar Domicilio");
+        msj = document.createElement("ol");
+        msj.innerHTML = "Completar Domicilio ";
+        sale.appendChild(msj);
         document.getElementById("f2domicilio").focus();
         correcto = false;
     }
     if (f2loca == "") {
-        alert("Completar Localidad");
+        msj = document.createElement("ol");
+        msj.innerHTML = "Completar Localidad ";
+        sale.appendChild(msj);
         document.getElementById("f2localidad").focus();
         correcto = false;
     }
     if (f2prov == "") {
-        alert("Completar provincia");
+        msj = document.createElement("ol");
+        msj.innerHTML = "Completar Provincia ";
+        sale.appendChild(msj);
         document.getElementById("f2provincia").focus();
         correcto = false;
     }
     if (f2nacio == "") {
-        alert("Completar Nacionalidad");
+        msj = document.createElement("ol");
+        msj.innerHTML = "Completar Nacionalidad ";
+        sale.appendChild(msj);
         document.getElementById("f2nacionalidad").focus();
         correcto = false;
     }
     if (f2fechnaci == "") {
-        alert("Completar Fecha de Nacimiento");
+        msj = document.createElement("ol");
+        msj.innerHTML = "Completar Fecha de Nacimiento ";
+        sale.appendChild(msj);
         document.getElementById("f2fechanacimiento").focus();
         correcto = false;
     }
     if (f2gene == "") {
-        alert("Completar Genero");
+        msj = document.createElement("ol");
+        msj.innerHTML = "Completar Genero ";
+        sale.appendChild(msj);
         document.getElementById("f2genero").focus();
         correcto = false;
     }
     if (f2prof == "") {
-        alert("Completar Profesión");
+        msj = document.createElement("ol");
+        msj.innerHTML = "Completar Profesión ";
+        sale.appendChild(msj);
         document.getElementById("f2profesion").focus();
         correcto = false;
     }
+    if ((!f2apelli == "") & (!f2nomb == "") & (verifyCuit(cui)) & (!f2numdni == "") & (!f2domi == "") & (!f2prof == "") & (!f2gene == "") & (!f2fechnaci == "") & (!f2nacio == "") & (!f2prov == "") & (!f2loca == "")) {
+        correcto = true;
+    }
     if (correcto) {
-        console.log(f2apelli + " " + f2nomb);//aca muestro en la consola
-        console.log(f2dni + " Numero " + f2numdni + " Cuil " + f2cui);
-        console.log(f2domi + " Loca " + f2loca + " Prov " + f2prov);
-        console.log(f2nacio + "Fecha de nac " + f2fechnaci);
-        console.log(f2gene + " Profe " + f2prof + "");
-        console.log(tomo)
-        alert("Cargdo con exito")
+        msj = document.createElement("ol");
+        msj.innerHTML = "Su Formulario tiene la siguiente informacion : "
+        sale.appendChild(msj);
+        //apellido
+        msj = document.createElement("ol");
+        msj.innerHTML = "Apellido :" + f2apelli;
+        sale.appendChild(msj);
+        //nombre
+        msj = document.createElement("ol");
+        msj.innerHTML = "Nombre :" + f2nomb;
+        sale.appendChild(msj);
+        //dni
+        msj = document.createElement("ol");
+        msj.innerHTML = "DNI : " + f2numdni;
+        sale.appendChild(msj);
+        //cuil
+        msj = document.createElement("ol");
+        msj.innerHTML = "Cuil : " + f2cui;
+        sale.appendChild(msj);
+        //domi
+        msj = document.createElement("ol");
+        msj.innerHTML = "Domicilio :"+f2domi;
+        sale.appendChild(msj);
+        //Loca
+        msj = document.createElement("ol");
+        msj.innerHTML = "Localidad :"+f2loca;
+        sale.appendChild(msj);
+        //prov
+        msj = document.createElement("ol");
+        msj.innerHTML = "Provincia : "+f2prov;
+        sale.appendChild(msj);
+        //nacio
+        msj = document.createElement("ol");
+        msj.innerHTML = "Nacionalidad : "+f2nacio;
+        sale.appendChild(msj);
+        //naci
+        msj = document.createElement("ol");
+        msj.innerHTML = "Fecha de Nacimiento : "+f2nacio;
+        sale.appendChild(msj);
+        //gene
+        msj = document.createElement("ol");
+        msj.innerHTML = "Genero : "+f2gene;
+        sale.appendChild(msj);
+        //prof
+        msj = document.createElement("ol");
+        msj.innerHTML = "Profesión : "+f2prof;
+        sale.appendChild(msj);
         //vacio los campos
         document.getElementById("f2apellido").value = "";
         document.getElementById("f2nombre").value = "";
@@ -227,7 +353,6 @@ function capturaInformacionf2() {
 
         //vuelvo a hacer foco en pellido
         document.getElementById("f2apellido").focus();
-        window.location.href="index.html";
     }
 
 

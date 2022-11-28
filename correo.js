@@ -78,7 +78,6 @@ function capturainformacion() {
         correcto = true;
     }
     if (correcto) {
-        alert("Mensaje Enviado");
         msj = document.createElement("ol");
         msj.innerHTML = "Su mensaje fue enviado de la siguiente manera : "
         sale.appendChild(msj);
@@ -115,10 +114,5 @@ function capturainformacion() {
         tel = document.getElementById("telefono").value = "";
         mensaje = document.getElementById("comentario").value="";
         apelli = document.getElementById("correo").focus();
-
-
-    }
-    else {
-        alert("Revise la informacion")
     }
 }
