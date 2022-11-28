@@ -83,12 +83,14 @@ function capturainformacion() {
         document.getElementById("genero").focus();
         correcto = false;
     }
-    if (prof == "") {
+    if ((prof == "") & (apelli == "")) {
         msj = document.createElement("ol");
         msj.innerHTML = "Completar Profesión";
         sale.appendChild(msj);
-        document.getElementById("profesion").focus();
+        document.getElementById("apellido").focus();
         correcto = false;
+    } else{
+        document.getElementById("profesion").focus();
     }
     if ((!prof == "") & (!gene == "") & (verifyCuit(cui)) & (!numdni == "") & (!prov == "") & (!loca == "") & (!domi == "") & (!nomb == "") & (!apelli == "")) {
         correcto = true;
